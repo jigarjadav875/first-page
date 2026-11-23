@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Mall - Shopping & Entertainment</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* Navigation */
+header {
+    background: #111827;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e9b44c;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #e9b44c;
+}
+
+/* Hero Section */
+.hero {
+    height: 550px;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=1600")
+    center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #e9b44c;
+    color: #111;
+    padding: 14px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* General Sections */
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 35px;
+    color: #111827;
+}
+
+/* Categories */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 3px 12px #ddd;
+    transition: .3s;
+}
+
+.category:hover {
+    transform: translateY(-7px);
+}
+
+.category img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.category h3 {
+    padding: 18px;
+}
+
+/* Stores */
+.stores {
+    background: #fff;
+}
+
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.store {
+    background: #f7f7f7;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.store h3 {
+    color: #c08a20;
+    margin-bottom: 10px;
+}
+
+/* Offers */
+.offers {
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+.offers h2 {
+    color: #e9b44c;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.offers p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+/* About */
+.about {
+    text-align: center;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Contact */
+.contact {
+    background: white;
+    text-align: center;
+}
+
+.contact p {
+    margin: 12px;
+}
+
+/* Footer */
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .store-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+}
+
+@media(max-width: 600px) {
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .categories,
+    .store-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header>
+    <div class="logo">GRAND MALL</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#stores">Stores</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<div class="hero" id="home">
+    <div>
+        <h1>WELCOME TO GRAND MALL</h1>
+        <p>Your World of Shopping, Food & Entertainment</p>
+        <a href="#categories" class="btn">Explore Now</a>
+    </div>
+</div>
+
+<!-- Categories -->
+<section id="categories">
+    <h2 class="section-title">Our Categories</h2>
+
+    <div class="categories">
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600">
+            <h3>Fashion & Clothing</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600">
+            <h3>Electronics</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600">
+            <h3>Restaurants</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600">
+            <h3>Entertainment</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- Stores -->
+<section class="stores" id="stores">
+    <h2 class="section-title">Popular Stores</h2>
+
+    <div class="store-grid">
+
+        <div class="store">
+            <h3>Fashion Hub</h3>
+            <p>Trendy clothing and accessories.</p>
+        </div>
+
+        <div class="store">
+            <h3>Tech World</h3>
+            <p>Latest mobiles and electronics.</p>
+        </div>
+
+        <div class="store">
+            <h3>Food Paradise</h3>
+            <p>Enjoy delicious food and drinks.</p>
+        </div>
+
+        <div class="store">
+            <h3>Beauty Zone</h3>
+            <p>Beauty and skincare products.</p>
+        </div>
+
+        <div class="store">
+            <h3>Kids Kingdom</h3>
+            <p>Shopping and fun for children.</p>
+        </div>
+
+        <div class="store">
+            <h3>Sports Arena</h3>
+            <p>Sportswear and fitness products.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Offers -->
+<section class="offers" id="offers">
+    <h2>MEGA SHOPPING SALE!</h2>
+    <p>Enjoy exciting discounts on your favourite brands.</p>
+    <a href="#stores" class="btn">Explore Stores</a>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2 class="section-title">About Our Mall</h2>
+
+    <div class="about">
+        <p>
+            Welcome to Grand Mall, your ultimate shopping and
+            entertainment destination. Discover amazing brands,
+            delicious restaurants, exciting entertainment and
+            unforgettable experiences all under one roof.
+            Visit us with your family and friends!
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <p>📍 Address: Your City, Gujarat, India</p>
+    <p>📞 Phone: +91 98765 43210</p>
+    <p>✉ Email: info@grandmall.com</p>
+    <p>🕒 Opening Hours: 10 AM - 10 PM</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Grand Mall. All Rights Reserved.</p>
+    <p>Shop | Dine | Enjoy</p>
+</footer>
+
+</body>
+</html>
